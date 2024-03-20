@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
+    Georgia, serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.black {
+  color: black;
+}
+.red-person-icon {
+  color: rgba(255, 33, 41, 0.8);
+}
+
+.blue-person-icon {
+  color: rgba(60, 255, 255, 0.8);
+}
+.green-person-icon {
+  color: rgba(149, 255, 143, 0.8);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 2.5vmin !important;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-top: 2.5rem;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+header {
+  width: 100vw;
+  height: 100px;
+  border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+  background-size: cover;
+  background-image: url("design-space-paper-textured-background.jpg");
+}
+
+.header-inner {
+  width: 90%;
+  height: 100%;
+  min-width: 21rem;
+  display: block;
+}
+
+.header-logo {
+  display: table;
+  height: 100%;
+  float: left;
+}
+
+.header-logo div {
+  height: 100%;
+  display: flex;
+  vertical-align: middle;
+  padding-top: 1.5rem;
+}
+
+.header-logo img {
+  height: 50px;
+  margin-top: 5px;
+}
+
+.header-logo h1 {
+  margin-top: 11px;
+  font-size: 1.5rem;
+}
+
+header nav {
+  float: right;
+  height: 100%;
+}
+
+header nav li {
+  display: table;
+  height: 100%;
+  float: left;
+  margin-right: 30px;
+}
+
+header nav li:last-of-type {
+  margin-right: 0;
+}
+
+header nav span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header nav a {
+  color: #101010;
+}
+
+header nav .currency-button {
+  margin: -1rem 0rem;
+  background-color: #bdffc2;
+  border-radius: 8px;
+  border-style: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+header nav .currency-button:hover,
+header nav .currency-button:focus {
+  background-color: #f082ac;
+}
+.main-section:not(.game-board-wrapper, #showModal, #restartBoard) {
+  padding-bottom: 8vw;
+  background-size: cover;
+  background-image: url("geometric_blocks_shape_in_white_background.jpg");
+}
+
+.game-board-wrapper {
+  /* background-image: url("design-space-paper-textured-background.jpg"); */
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+#game-board {
+  border: 1px solid black;
+}
+
+#players-turn {
+  display: inline-block;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: 5rem;
+}
+
+.modal-btn {
+}
+.play-btn {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 30px 30px 30px 30px;
+  background-color: lightblue;
+  text-shadow: -1px -1px black, 1px 1px white;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.1rem grey;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  border-radius: 25px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70vw;
+}
+
+#result {
+  padding-top: 0.5rem;
+}
+#trophy {
+  width: 40vw;
+  height: 30vw;
+  display: inline-block;
+  padding-left: 10vw;
+  display: none;
+}
+
+table {
+  display: none;
+  width: 15%;
+  border-collapse: collapse;
+  margin: 0 auto 0 auto;
+  background-color: white;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+table thead tr {
+  background-color: #00afda;
+  color: #ffffff;
+  height: 3rem;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table tbody tr {
+  height: 3rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.tables-title {
+  display: flex;
+  gap: 53rem;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 35rem;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  margin: 1rem 0rem;
+  background-color: #bdffc2;
+  border-radius: 8px;
+  border-style: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f082ac;
+}
+
+.forms {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.number-form {
+  display: block;
+}
+
+.name-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-home {
+  bottom: 0;
+}
+
+.footer-notes {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+footer {
+  text-align: center;
+  background-size: cover;
+  background-image: url("design-space-paper-textured-background.jpg");
+  position: absolute;
+  width: 100vw;
+}

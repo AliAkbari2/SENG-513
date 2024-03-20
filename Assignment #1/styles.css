@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
+    Georgia, serif;
+}
+
+body {
+  background-image: url("wholeSiteBackground.jpg");
+  background-size: cover;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-top: 2.5rem;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+header {
+  width: 100vw;
+  height: 100px;
+  border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+}
+
+.header-inner {
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-logo {
+  display: table;
+  height: 100%;
+  float: left;
+}
+
+.header-logo div {
+  height: 100%;
+  display: flex;
+  vertical-align: middle;
+  padding-top: 1.5rem;
+}
+
+.header-logo img {
+  height: 50px;
+  margin-top: 5px;
+}
+
+.header-logo h1 {
+  height: 50px;
+  margin-top: 5px;
+}
+
+header nav {
+  float: right;
+  height: 100%;
+}
+
+header nav li {
+  display: table;
+  height: 100%;
+  float: left;
+  margin-right: 30px;
+}
+
+header nav li:last-of-type {
+  margin-right: 0;
+}
+
+header nav span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header nav a {
+  color: #101010;
+}
+
+header nav .currency-button {
+  margin: -1rem 0rem;
+  background-color: #bdffc2;
+  border-radius: 8px;
+  border-style: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+header nav .currency-button:hover,
+header nav .currency-button:focus {
+  background-color: #f082ac;
+}
+
+.crypto-banner-wrapper {
+  height: 62px;
+  background-color: #1d2330;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #282e3b;
+  border-radius: 4px;
+  text-align: right;
+  line-height: 14px;
+  block-size: 62px;
+  font-size: 12px;
+  font-feature-settings: normal;
+  text-size-adjust: 100%;
+  box-shadow: inset 0 -20px 0 0 #262b38;
+  padding: 1px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+.crypto-banner {
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+.crypto-banner-iframe {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 36px;
+  border: 0;
+}
+.btc-graph-wrapper {
+  height: 560px;
+  background-color: #1d2330;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #282e3b;
+  border-radius: 4px;
+  text-align: right;
+  line-height: 14px;
+  font-size: 12px;
+  font-feature-settings: normal;
+  text-size-adjust: 100%;
+  box-shadow: inset 0 -20px 0 0 #262b38;
+  padding: 1px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.btc-graph {
+  height: 540px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.btc-graph-iframe {
+  width: 100%;
+  height: 536px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
+
+.coming-soon {
+  display: flex;
+}
+.coming-soon-text {
+  margin: auto;
+  padding-left: 3rem;
+  font-size: 10rem;
+}
+
+.button-list {
+  padding-left: 9rem;
+  padding-top: 2rem;
+}
+.top-gains-loses-button-list {
+  padding-left: 6rem;
+  padding-top: 2rem;
+}
+
+.button {
+  background-color: #bdffc2;
+  border-radius: 8px;
+  border-style: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f082ac;
+}
+
+table {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 0.5rem auto 3rem auto;
+  background-color: white;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+  background-color: #00afda;
+  color: #ffffff;
+  height: 3rem;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table tbody tr {
+  height: 3rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+table thead th.active-column {
+  font-weight: bold;
+  color: #d0ff9b;
+}
+.tables-title {
+  display: flex;
+  gap: 53rem;
+}
+.tables-title-gaines {
+  padding-left: 6rem;
+}
+.top-gains-loses-tables {
+  display: flex;
+}
+.top-gains-loses-tables table {
+  width: 40%;
+  margin-top: 1rem;
+}
+.change-negative {
+  color: red;
+}
+.change-positive {
+  color: rgb(100, 174, 100);
+}
+
+.videos {
+  display: flex;
+  width: 100%;
+  margin: 2rem 2rem 2rem 8.5rem;
+  padding-bottom: 3rem;
+  gap: 1rem;
+}
+.how-to-buy-iframe {
+  width: 560px;
+  height: 315px;
+}
+.best-wallet-iframe {
+  width: 560px;
+  height: 315px;
+}
+.coin-img {
+  width: 112rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+}
+.new-coin-img {
+  width: 29rem;
+  padding-top: 7rem;
+}
+
+.gains-loses-img {
+  width: 80rem;
+  padding-top: 4rem;
+  padding-left: 20rem;
+}
+
+.nft-img {
+  width: 38rem;
+  padding-left: 5rem;
+}
+
+.learn-crypto-images {
+  display: flex;
+}
+
+.learn-crypto-image {
+  border-radius: 10px;
+  padding: 2rem 0 0 10rem;
+}
+.learn-crypto-image img {
+  width: 28rem;
+  height: 28rem;
+}
+
+.sketchfab-embed-wrapper {
+  padding-top: 2rem;
+  display: flex;
+}
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+}
+.page-change {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+.page-change a {
+  color: black;
+  padding: 8px 16px;
+}
+
+.page-change a.active {
+  background-color: #4caf50;
+  color: white;
+}
+.news-gallery-wrapper {
+  padding: 4rem 0 0 4rem;
+}
+.news-gallery {
+  display: flex;
+  padding-bottom: 4rem;
+}
+.news-gallery-img {
+  height: 20rem;
+  width: 30rem;
+}
+.news-gallery-description {
+  padding-left: 2rem;
+}
+.gallery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10rem 4rem 4rem 16rem;
+  margin: auto;
+}
+.gallery-wrapper > div {
+  flex: 50%;
+  padding-bottom: 2rem;
+}
+.gallery-wrapper img {
+  width: 28rem;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12rem;
+}
+
+.gallery-description {
+  max-width: 20rem;
+}
+
+.footer-notes {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+footer {
+  text-align: center;
+}
