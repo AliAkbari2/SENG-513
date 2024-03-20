@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel=”stylesheet” href=”css/bootstrap.css”> <link rel=”stylesheet”
+    href=”css/bootstrap-responsive.css”>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dots & Boxes</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body class="card">
+    <header class="card-header">
+      <div class="header-inner">
+        <div class="header-logo">
+          <div>
+            <img src="dot&BoxesLogo.png" alt="Dots & Boxes" />
+            <h1>Dots & Boxes</h1>
+          </div>
+        </div>
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+          <li>
+            <div class="tooltip">
+              <a href="index.html">Home</a>
+              <span class="tooltiptext">Go to home</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="play.html">Play</a>
+              <span class="tooltiptext">Play Game</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="playOnline.html">Online</a>
+              <span class="tooltiptext">Play Online</span>
+            </div>
+          </li>
+        </nav>
+      </div>
+    </header>
+
+    <div id="waiting-lobby">Waiting on players to join in lobby:</div>
+
+    <div id="not-waiting-lobby" class="main-section-online">
+      <div class="game-board-wrapper">
+        <span class="material-symbols-outlined red-person-icon"
+          >Person<span
+            id="player-one"
+            class="material-symbols-outlined black"
+          ></span
+        ></span>
+        <span class="material-symbols-outlined blue-person-icon"
+          >Person<span
+            id="player-two"
+            class="material-symbols-outlined black"
+          ></span
+        ></span>
+        <span
+          id="green-person-icon"
+          class="material-symbols-outlined green-person-icon"
+          >Person<span
+            id="player-three"
+            class="material-symbols-outlined black"
+          ></span
+        ></span>
+      </div>
+
+      <div id="resultModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="result"></p>
+
+          <table id="table">
+            <thead>
+              <tr>
+                <th>Player(s)</th>
+                <th>Result</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <div class="modal-btn">
+            <button id="home" class="button">Home</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="waitingModal" class="waiting-modal">
+        <div class="waiting-modal-content">
+          <p>A player has left the lobby, waiting on players to join back!</p>
+        </div>
+      </div>
+
+      <!-- <div class="button-wrapper">
+        <button id="showModal" class="button">Previous Result</button>
+        <button id="restartBoard" class="button">Restart Game</button>
+      </div> -->
+
+      <div class="game-board-wrapper">
+        <span id="players-turn" class="material-symbols-outlined"> </span>
+      </div>
+      <div class="game-board-wrapper">
+        <canvas id="game-board"> </canvas>
+      </div>
+    </div>
+
+    <div id="hostOrJoin" class="button-wrapper-online">
+      <div>
+        <h3>Host a lobby:</h3>
+        <button id="host-lobby-btn" class="play-btn" type="button">
+          Create
+        </button>
+      </div>
+      <div>
+        <h3>Join a lobby:</h3>
+        <button id="join-lobby-btn" class="play-btn" type="button">Join</button>
+      </div>
+    </div>
+
+    <form id="hostForm" class="host">
+      <div class="forms">
+        <div class="number-form">
+          <p>Number of Players</p>
+          <input
+            type="radio"
+            id="twoPlayersHostLobby"
+            name="numberOfPlayers"
+            value="2"
+          />
+          <label for="twoPlayers">Two Players</label>
+
+          <br />
+          <input
+            type="radio"
+            id="threePlayersHostLobby"
+            name="numberOfPlayers"
+            value="3"
+            checked="checked"
+          />
+          <label for="threePlayers">Three Players</label>
+        </div>
+
+        <div class="name-form">
+          <label for="firstPlayerName">Your name</label>
+          <input id="firstPlayerName" type="text" value="Player 1" />
+          <label for="gameRoomPass">Game Room Password</label>
+          <input id="gameRoomPass" type="text" />
+          <button id="randomize-btn" class="randomize-btn" type="button">
+            Random-ID
+          </button>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button id="create-btn" class="play-btn" type="button">Create</button>
+      </div>
+    </form>
+    <form id="joinForm" class="join">
+      <div class="forms">
+        <div class="name-form">
+          <label for="playerName">Your name</label>
+          <input id="playerName" type="text" />
+          <label for="joinGameRoomPass">Game Room Password</label>
+          <input id="joinGameRoomPass" type="password" />
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button id="join-btn" class="play-btn" type="button">Join</button>
+      </div>
+    </form>
+    <footer class="footer-home card-footer">
+      <div class="footer-notes">
+        <h5>How to play:</h5>
+        <h6>
+          Create a room with the generated room Id, or your own text input for
+          the room Id. Enter your name, and choose number of players to play
+          against.
+        </h6>
+        <h6>
+          Copy the link and provide it to the number of player playing excluding
+          you. Game will start once all remaining players have joined using the
+          game room ID.
+        </h6>
+        <h6>
+          Two or Three players take turns to join two adjacent dots with a
+          horizontal or vertical line.
+        </h6>
+        <h6>
+          If a player completes the fourth side of a box their initial is drawn
+          on that box and they must draw another line.
+        </h6>
+        <h6>
+          When all the boxes have been completed the winner is the player who
+          has initialled the most boxes.
+        </h6>
+      </div>
+
+      <p>Copyright &copy; DotsAndBoxes.com</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

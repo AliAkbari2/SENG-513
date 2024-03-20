@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dots & Boxes</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-logo">
+          <div>
+            <img src="dot&BoxesLogo.png" alt="Dots & Boxes" />
+            <h1>Dots & Boxes</h1>
+          </div>
+        </div>
+        <nav>
+          <li>
+            <div class="tooltip">
+              <a href="index.html">Home</a>
+              <span class="tooltiptext">Go to home</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="play.html">Play</a>
+              <span class="tooltiptext">Play Game</span>
+            </div>
+          </li>
+        </nav>
+      </div>
+    </header>
+
+    <form id="homePageForm">
+      <div class="forms">
+        <div class="name-form">
+          <label for="playerName">Your name</label>
+          <input id="playerName" type="text" />
+          <label for="joinGameRoomPass">Game Room Password</label>
+          <input id="joinGameRoomPass" type="password" />
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button id="join-btn" class="play-btn" type="button">Join</button>
+      </div>
+    </form>
+
+    <footer>
+      <div class="footer-notes">
+        <h5>How to play:</h5>
+        <h6>
+          Two or Three players take turns to join two adjacent dots with a
+          horizontal or vertical line.
+        </h6>
+        <h6>
+          If a player completes the fourth side of a box their initial is drawn
+          on that box and they must draw another line.
+        </h6>
+        <h6>
+          When all the boxes have been completed the winner is the player who
+          has initialled the most boxes.
+        </h6>
+      </div>
+
+      <p>Copyright &copy; DotsAndBoxes.com</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

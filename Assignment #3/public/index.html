@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel=”stylesheet” href=”css/bootstrap.css”> <link rel=”stylesheet”
+    href=”css/bootstrap-responsive.css”>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dots & Boxes</title>
+  </head>
+  <body class="card">
+    <header class="card-header">
+      <div class="header-inner">
+        <div class="header-logo">
+          <div>
+            <img src="dot&BoxesLogo.png" alt="Dots & Boxes" />
+            <h1>Dots & Boxes</h1>
+          </div>
+        </div>
+        <nav>
+          <li>
+            <div class="tooltip">
+              <a href="index.html">Home</a>
+              <span class="tooltiptext">Go to home</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="play.html">Play</a>
+              <span class="tooltiptext">Play Game</span>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <a href="playOnline.html">Online</a>
+              <span class="tooltiptext">Play Online</span>
+            </div>
+          </li>
+        </nav>
+      </div>
+    </header>
+    <div class="main-section-home">
+      <form id="homePageForm">
+        <div class="forms">
+          <div class="number-form">
+            <p>Number of Players</p>
+            <input
+              type="radio"
+              id="twoPlayers"
+              name="numberOfPlayers"
+              value="2"
+            />
+            <label for="twoPlayers">Two Players</label>
+
+            <br />
+            <input
+              type="radio"
+              id="threePlayers"
+              name="numberOfPlayers"
+              value="3"
+              checked="checked"
+            />
+            <label for="threePlayers">Three Players</label>
+          </div>
+
+          <div class="name-form">
+            <p>Names of Players</p>
+            <label for="firstPlayerName">First Player's Name</label>
+            <input id="firstPlayerName" type="text" value="Player 1" />
+            <label for="secondPlayerName">Second Player's Name</label>
+            <input id="secondPlayerName" type="text" value="Player 2" />
+            <label for="thirdPlayerName">Third Player's Name</label>
+            <input id="thirdPlayerName" type="text" value="Player 3" />
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="play-btn" type="submit">Play</button>
+          <button id="online" class="play-btn" type="button">Online</button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer-home card-footer">
+      <div class="footer-notes">
+        <h5>How to play:</h5>
+        <h6>
+          Two or Three players take turns to join two adjacent dots with a
+          horizontal or vertical line.
+        </h6>
+        <h6>
+          If a player completes the fourth side of a box their initial is drawn
+          on that box and they must draw another line.
+        </h6>
+        <h6>
+          When all the boxes have been completed the winner is the player who
+          has initialled the most boxes.
+        </h6>
+      </div>
+
+      <p>Copyright &copy; DotsAndBoxes.com</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
